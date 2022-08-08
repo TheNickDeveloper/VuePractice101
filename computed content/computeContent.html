@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Learning VUE</title>
+    <!-- Vue script to connect with server -->
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="methods">zz
+        <div v-for="n in 10">
+            {{n}}: {{rand(n)}}
+        </div>
+    </div>
+    <hr>
+    <div id="computed">
+        <div>
+            Ramdom : {{ (this.rand=10000) && (rand) }}
+        </div>
+    </div>
+    <hr>
+    <div id="watch">
+        <label for="max-price" class="form-label">Max Price</label>
+        <input v-model.lazy="max" type="number" class="form-control" id="max-price" aria-describedby="maxHelp">
+        <div id="maxHelp" class="form-test">set the maximum price to {{max}}</div>
+        {{myAlert}}
+    </div>
+</body>
+</html>
+<script src="computeContent.js"></script>
