@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Learning VUE</title>
+    <!-- Vue script to connect with server -->
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <section id="app">
+        <label for="max-price" class="form-label h2">Max price</label>
+        <input v-model.number="max" class="form-control" id="max-price">
+        <input v-model.number="max" type="range" class="form-range" min="0" max="100">
+
+        <input v-model="displayLabel" class="form-check-input" id="showLabels" type="checkbox">
+        <label class="form-check-label" for="showLabels">
+            show labels
+        </label>
+        <!-- v-for -->
+        <div v-for= "(item, index) in products":key="item.id" id="display-list">
+            <template v-if="item.price <= max">
+                <div class="row">
+                    <div class="column">
+                        <!-- v-bindS -->
+                        <img class="img-fluid d-block" :src="item.image" :alt="item.name">
+                    </div>
+                    <div class="column">
+                        <h3 class="text-info">{{item.name}}</h1>
+                        <p class="mb-0">{{item.description}}</p>
+                        <div class="h5 float-right">
+                            <!-- v-if -->
+                            <span class="label label-success" v-if="item.price>=100 & displayLabel">premier</span>
+                            <span class="label label-primary" v-else-if="item.price>=60 & displayLabel">value</span>
+                            <span class="label label-danger" v-else-if="item.price<60 & displayLabel">sale</span>
+                            ${{item.price}}
+                        </div>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </section>
+    
+    <!-- Reffering js file 'app.js' -->
+    <script src="app.js"></script>
+</body>
+</html>
