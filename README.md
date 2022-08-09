@@ -4,6 +4,6 @@
 
 Vue.js 101 practice from scratch :grinning:
 <br/>
-Learning by doing, will try to update it as frequent as possible :fire:
+Learning by doing, will try to update it as frequent as possible :fire: :fire: :fire:
 
  
