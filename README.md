@@ -1,6 +1,6 @@
 # VuePractice101
 
-![image](https://github.com/TheNickDeveloper/VuePractice101/Vuejs_logo.png)
+![image](https://github.com/TheNickDeveloper/VuePractice101/blob/main/Vuejs_logo.png)
 
 Vue.js 101 practice from scratch :grinning:
 <br/>
