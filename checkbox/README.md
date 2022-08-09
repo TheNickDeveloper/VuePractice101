@@ -15,7 +15,6 @@ As mentioned from above, v-model can be used as real time two way data binding b
 </div>
 ```
 <p align = "center">code - HTML file_checkbox binding</p>
-
 <br/>
 
 ```html
@@ -41,7 +40,6 @@ As mentioned from above, v-model can be used as real time two way data binding b
 <div>checked boxes:{{myCheckboxes}}</div>
 ```
 <p align = "center">code - HTML file_multiple checkbox with value
-
 <br/>
 
 ```html
@@ -57,7 +55,6 @@ As mentioned from above, v-model can be used as real time two way data binding b
 </div>
 ```
 <p align = "center">code - HTML file_multiple select</p>
-
 <br/>
 
 ```html
