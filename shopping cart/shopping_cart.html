@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Learning VUE</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <nav class="nav">
+            <h2 class="nav__header">Products</h2>
+            <div class="nav__cart">
+                <button @click="showCart = !showCart">
+                    CART
+                </button>
+                <span class="total-quantity">{{ totalQuantity }}</span>
+                <div v-if="showCart" class="cart-dropdown">
+                    <ul class="cart-dropdown__list">
+                        <li>Total Quantity:{{ totalQuantity }}</li>
+                        <li>Total Price:${{ totalPrice }}</li>
+                        <li>----------------------</li>
+                        <!-- get the product which quanity is no zero from produts -->
+                        <li
+                            
+                            v-for="product in cart"
+                            :key="product.id"
+                        >
+                            {{ product.name }} 
+                            ({{ product.quantity }};${{product.subTotal}})
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <section class="products">
+            <div v-for="product in products" :key="product.id" class="product">
+                <h3 class="product__header">{{ product.name }}</h3>
+                <!-- v-bind_image -->
+                <img src="https://via.placeholder.com/200" :alt="product.name" class="product__image">
+                <p class="product__description">
+                    {{ product.description }}
+                </p>
+                <div class="cart">
+                    <!-- vue event -->
+                    <button @click="updateCart(product, 'subtract')" class="cart__button">
+                        -
+                    </button>
+                    <span class="cart__quantity">
+                        {{ product.quantity }}
+                    </span>
+                    <button @click="updateCart(product, 'add')" class="cart__button">
+                        +
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
