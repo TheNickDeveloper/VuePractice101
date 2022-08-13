@@ -9,7 +9,7 @@ This is shopping cart practice powered by Vue.js, and the application was styled
 
 The web page cab seperate into two section, the shopping cart and displayed items. Whole picture can refer figure from below:
 
-![image](https://github.com/TheNickDeveloper/VuePractice101/blob/main/Vuejs_logo.png)
+![image](https://github.com/TheNickDeveloper/VuePractice101/blob/main/shopping%20cart/shoppingCart.png)
 
 <br/>
 
